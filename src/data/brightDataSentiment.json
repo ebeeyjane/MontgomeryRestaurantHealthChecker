@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1",
+        "name": "Chappy's Deli",
+        "healthScore": 98,
+        "address": "1611 Perry Hill Rd",
+        "brightDataSentiment": 4.2,
+        "footTrafficVolume": 450
+    },
+    {
+        "id": "2",
+        "name": "Vintage Year",
+        "healthScore": 95,
+        "address": "405 Cloverdale Rd",
+        "brightDataSentiment": 4.7,
+        "footTrafficVolume": 320
+    },
+    {
+        "id": "3",
+        "name": "Lek's Railroad Thai",
+        "healthScore": 92,
+        "address": "300 Water St",
+        "brightDataSentiment": 4.2,
+        "footTrafficVolume": 380
+    },
+    {
+        "id": "5",
+        "name": "Central",
+        "healthScore": 88,
+        "address": "129 Coosa St",
+        "brightDataSentiment": 4.5,
+        "footTrafficVolume": 410
+    },
+    {
+        "id": "8",
+        "name": "Dirk's Filet & Vine",
+        "healthScore": 85,
+        "address": "431 Cloverdale Rd",
+        "brightDataSentiment": 4.3,
+        "footTrafficVolume": 390
+    },
+    {
+        "id": "4",
+        "name": "Chris' Famous Hotdogs",
+        "healthScore": 75,
+        "address": "138 Dexter Ave",
+        "brightDataSentiment": 3.9,
+        "footTrafficVolume": 480
+    },
+    {
+        "id": "6",
+        "name": "SA Za",
+        "healthScore": 82,
+        "address": "130 Commerce St",
+        "brightDataSentiment": 4.0,
+        "footTrafficVolume": 350
+    },
+    {
+        "id": "7",
+        "name": "El Rey Burrito Lounge",
+        "healthScore": 78,
+        "address": "1031 E Fairview Ave",
+        "brightDataSentiment": 4.2,
+        "footTrafficVolume": 290
+    }
+]

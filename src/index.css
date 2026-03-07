@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #137fec;
+  --primary-light: rgba(19, 127, 236, 0.1);
+  --success: #34c759;
+  --success-light: rgba(52, 199, 89, 0.1);
+  --warning: #ff9500;
+  --warning-light: rgba(255, 149, 0, 0.1);
+  --danger: #ff3b30;
+  --danger-light: rgba(255, 59, 48, 0.1);
+  
+  --bg-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --text-primary: #1c1c1e;
+  --text-secondary: #8e8e93;
+  --border-color: #e5e5ea;
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Public Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Mobile App Container Layout */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  background: var(--bg-color);
+}
+
+/* For desktop preview - constrain width to look like mobile */
+@media (min-width: 600px) {
+  #root {
+    max-width: 414px; /* iPhone Max width */
+    height: 100vh;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+  }
+}
+
+.screen-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 80px; /* Space for bottom nav */
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+h2 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+
+.text-muted {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Score Badge Styles */
+.score-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.score-excellent {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+
+.score-satisfactory {
+  background-color: var(--warning-light);
+  color: var(--warning);
+}
+
+.score-poor {
+  background-color: var(--danger-light);
+  color: var(--danger);
+}
+
+/* UI Elements */
+.card {
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface-color);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 100;
+}
+
+@media (min-width: 600px) {
+  .bottom-nav {
+    position: absolute; /* Stick to bottom of container on desktop */
+  }
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  gap: 4px;
+}
+
+.nav-item.active {
+  color: var(--primary);
+}
+
+.search-bar {
+  background: white;
+  border-radius: var(--radius-full);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  margin-bottom: 16px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-family: inherit;
+  font-size: 1rem;
+}
