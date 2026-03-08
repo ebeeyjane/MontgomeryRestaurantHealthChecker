@@ -73,6 +73,42 @@ const CityAnalytics = () => {
           </ResponsiveContainer>
         </div>
       </div>
+      <div className="card" style={{ padding: 20, marginBottom: 40 }}>
+        <h3 style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--primary)' }}><Sparkles size={20} /> Project Roadmap: Scaling MGM Vibe</h3>
+        <p className="text-muted" style={{ fontSize: '0.9rem', marginBottom: 20 }}>Our vision for transforming Montgomery through Data Fusion.</p>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <div style={{ padding: '12px 16px', background: '#fff', borderRadius: 12, border: '1px solid var(--border-color)', display: 'flex', gap: 12 }}>
+            <div style={{ background: 'rgba(19, 127, 236, 0.1)', color: 'var(--primary)', padding: 8, borderRadius: 8, height: 'fit-content' }}>
+              <Briefcase size={18} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>Compliance-as-a-Service</div>
+              <div style={{ fontSize: '0.85rem', color: '#666' }}>Allowing business owners to "Claim their Business" for automated compliance alerts and AI performance metrics.</div>
+            </div>
+          </div>
+
+          <div style={{ padding: '12px 16px', background: '#fff', borderRadius: 12, border: '1px solid var(--border-color)', display: 'flex', gap: 12 }}>
+            <div style={{ background: 'rgba(255, 149, 0, 0.1)', color: '#ff9500', padding: 8, borderRadius: 8, height: 'fit-content' }}>
+              <TrendingUp size={18} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>Expanded Civic Data Fusion</div>
+              <div style={{ fontSize: '0.85rem', color: '#666' }}>Integrating Montgomery Crime and 311 request data to create a real-time "City Vibe & Safety" score.</div>
+            </div>
+          </div>
+
+          <div style={{ padding: '12px 16px', background: '#fff', borderRadius: 12, border: '1px solid var(--border-color)', display: 'flex', gap: 12 }}>
+            <div style={{ background: 'rgba(52, 199, 89, 0.1)', color: 'var(--success)', padding: 8, borderRadius: 8, height: 'fit-content' }}>
+              <Search size={18} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 'bold', fontSize: '0.95rem' }}>Predictive Auditing Engine</div>
+              <div style={{ fontSize: '0.85rem', color: '#666' }}>Helping city departments optimize inspection routes based on AI-predicted hygiene risk levels.</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
