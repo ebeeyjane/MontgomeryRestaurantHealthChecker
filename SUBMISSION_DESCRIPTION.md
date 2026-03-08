@@ -30,7 +30,8 @@ Montgomery's Open Data portal is a treasure trove of information, but for many c
 One of the biggest challenges was handling the raw, nested JSON structure of municipal ArcGIS data and mapping it to a modern React state. Additionally, we had to solve the "Concurrency Challenge"—ensuring the app remained responsive while performing real-time public sentiment scraping via the Bright Data proxy network.
 
 ## Accomplishments that we're proud of
-We are incredibly proud of the **Correlation Engine**. Successfully proving—with live data—that a 10-point drop in a city health score correlates to a measurable star-rating drop in public sentiment is a powerful proof-of-concept for how Open Data can drive business decisions.
+- **Market Originality:** Our research shows that while the Alabama Department of Public Health and the City of Montgomery provide online databases and ArcGIS dashboards, there is **no dedicated mobile-first, consumer-focused application** specifically for this data in Montgomery.
+- **The Correlation Engine:** Successfully proving—with live data—that a 10-point drop in a city health score correlates to a measurable star-rating drop in public sentiment is a powerful proof-of-concept for how Open Data can drive business decisions. This fusion of **Bright Data** with government records is a first-of-its-kind feature in this market.
 
 ## What we learned
 We learned that the true power of "Smart Cities" isn't just in collecting data, but in **Data Fusion**. By mixing government records with public web data (Bright Data), you uncover insights that neither dataset could show on its own.

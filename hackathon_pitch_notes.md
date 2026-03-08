@@ -17,6 +17,7 @@ A mobile-first, Civic Analytics React application that fuses data from the **Mon
 1. **The Hook:** Citizens are flying blind on food safety. City data exists, but it's buried in complex JSON formats or hard-to-read government sites.
 2. **The Demo:** (Show the beautiful UI, the Map, and the List filters). Emphasize how easy it is to find a safe place to eat using our Vibe-coded UI.
 3. **The Tech (Points Winner):** We are pulling *live* JSON directly from the Montgomery Open Data ArcGIS API.
+- **The Competitive Edge:** While the city has a raw ArcGIS dashboard, our research confirms there is **no dedicated mobile consumer app** for this. Our app is the first to bridge the gap between "Government Data" and "User Vibe."
 4. **The "Wow" Factor (+3 Bright Data Bonus Points):** (Switch to the City Analytics tab). We didn't just show the city's data; we used the **Bright Data MCP** to scrape live Yelp/Google sentiment, proving a direct correlation between health compliance and public sentiment scores. 
 5. **The Future & Monetization:** End by pointing out the "Claim Business" button. This transitions the pitch from a "cool prototype" to a viable, revenue-generating startup.
 
