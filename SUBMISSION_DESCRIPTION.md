@@ -16,6 +16,7 @@ Montgomery's Open Data portal is a treasure trove of information, but for many c
 - **AI Inspector Insight:** Each facility features an "Intelligent Agent" summary that analyzes historical inspection findings to predict a restaurant's next audit outcome and public sentiment risk.
 - **City Analytics Dashboard:** A macro-view for city officials that uses **Bright Data** to correlate official health scores with public ratings (Yelp/Google).
 - **Economic Impact Alerts:** Highlighting how health compliance directly influences public sentiment and foot traffic, driving city-wide economic growth.
+- **Order with Confidence:** A consumer ordering interface that links live health verification with a secure placeholder payment flow, allowing citizens to support safe local businesses directly.
 
 ## How we built it
 - **Frontend:** Built with **Vite + React** for a snappy, mobile-first performance.
@@ -37,6 +38,7 @@ One of the biggest challenges was handling the raw, nested JSON structure of mun
 We learned that the true power of "Smart Cities" isn't just in collecting data, but in **Data Fusion**. By mixing government records with public web data (Bright Data), you uncover insights that neither dataset could show on its own.
 
 ## What's next for MGM Health Check
-- **Compliance-as-a-Service:** Allowing business owners to "Claim their Business" for automated compliance alerts.
-- **Expanded Civic Data:** Integrating Montgomery Crime and 311 service request data to create a comprehensive "City Vibe & Safety" score.
-- **Predictive Auditing:** Helping city departments optimize their inspection routes based on AI-predicted risk levels.
+- **Compliance-as-a-Service (B2B SaaS):** Scalable virtual compliance officer for SMBs, integrating business licenses, building permits, and fire inspections.
+- **Real Estate & Insurance Risk Engine (Enterprise):** A "Location Risk API" for institutions, combining health, crime, and 311 data with Bright Data sentiment.
+- **Supply Chain & Vendor Auto-Verification (B2B):** Automated procurement vetting for large institutions to protect against liability.
+- **MGM Vibe Check for Real Estate (B2C/Affiliate):** AI-driven neighborhood vibe and safety scores for homebuyers, integrated with real estate platforms.

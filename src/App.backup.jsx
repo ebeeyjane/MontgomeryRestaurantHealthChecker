@@ -9,6 +9,8 @@ import { foodScores } from './data/foodScores';
 import brightDataSentiment from './data/brightDataSentiment.json';
 import './index.css';
 
+// ... (skipping createCustomIcon down through FacilityDetails intentionally for brevity, we edit the CityAnalytics bit only)
+
 // --- NEW HACKATHON ANALYTICS COMPONENT ---
 // Correlates Montgomery Open Data (Health Scores) with proxy Bright Data values (Public Sentiment / Foot Traffic)
 const CityAnalytics = () => {
@@ -325,16 +327,6 @@ const FacilityDetails = () => {
   const navigate = useNavigate();
   const id = pathname.split('/').pop();
   const facility = foodScores.find(f => f.id === id) || foodScores[0];
-  const [isOrdering, setIsOrdering] = useState(false);
-  const [orderComplete, setOrderComplete] = useState(false);
-
-  const handlePlaceOrder = () => {
-    setOrderComplete(true);
-    setTimeout(() => {
-      setOrderComplete(false);
-      setIsOrdering(false);
-    }, 2500);
-  };
 
   return (
     <div className="screen-container" style={{ padding: 0 }}>
@@ -360,7 +352,7 @@ const FacilityDetails = () => {
           </div>
         </div>
 
-        {/* AI INSIGHT BOX */}
+        {/* NEW AI INSIGHT BOX FOR ORIGINALITY */}
         <div className="card" style={{ marginTop: 16, background: 'linear-gradient(to right, rgba(19, 127, 236, 0.08), rgba(19, 127, 236, 0.02))', border: '1px solid rgba(19, 127, 236, 0.2)' }}>
           <div className="flex-row" style={{ gap: 8, marginBottom: 8, color: 'var(--primary)', fontWeight: 'bold' }}>
             <Sparkles size={18} /> AI Inspector Insight
@@ -398,117 +390,37 @@ const FacilityDetails = () => {
           ))}
         </div>
 
-        {/* ORDERING ACTIONS */}
+        {/* NEW ACTION BUTTONS FOR COMMERCIALIZATION */}
         <div style={{ marginTop: 24, marginBottom: 32, display: 'flex', flexDirection: 'column', gap: 12 }}>
-          <button
-            onClick={() => setIsOrdering(true)}
-            style={{
-              width: '100%',
-              padding: '16px',
-              background: 'linear-gradient(135deg, #34c759 0%, #28a745 100%)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '12px',
-              fontWeight: 'bold',
-              fontSize: '1.1rem',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '12px',
-              cursor: 'pointer',
-              boxShadow: '0 4px 6px rgba(52, 199, 89, 0.2)'
-            }}
-          >
-            <Sparkles size={22} /> Order with Confidence
-          </button>
-
           <button style={{
             width: '100%',
-            padding: '14px',
-            background: 'rgba(19, 127, 236, 0.05)',
-            color: 'var(--primary)',
-            border: '1px solid var(--primary)',
+            padding: '16px',
+            background: 'linear-gradient(135deg, #137fec 0%, #0d5aa7 100%)',
+            color: 'white',
+            border: 'none',
             borderRadius: '12px',
-            fontWeight: '600',
-            fontSize: '0.95rem',
+            fontWeight: 'bold',
+            fontSize: '1rem',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             gap: '8px',
             cursor: 'pointer',
+            boxShadow: '0 4px 6px rgba(19, 127, 236, 0.2)'
           }}>
-            <Briefcase size={18} /> Claim Business & Unlock Alerts
+            <Briefcase size={20} /> Claim Business & Unlock Alerts
           </button>
           <div style={{ textAlign: 'center', fontSize: '0.8rem', color: '#8e8e93' }}>
-            Powered by Montgomery Open Data Compliance Engine.
+            Get predictive AI warnings before an inspector arrives.
           </div>
         </div>
       </div>
-
-      {/* ORDERING MODAL OVERLAY */}
-      {isOrdering && (
-        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'white', zIndex: 1000, display: 'flex', flexDirection: 'column', animation: 'slideUp 0.3s ease-out' }}>
-          <div style={{ padding: '20px', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <h3 style={{ margin: 0 }}>Secure Order: {facility.name}</h3>
-            <button onClick={() => setIsOrdering(false)} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', color: '#8e8e93' }}>&times;</button>
-          </div>
-
-          <div style={{ flex: 1, padding: 20, overflowY: 'auto' }}>
-            <div style={{ padding: '8px 12px', background: 'rgba(52, 199, 89, 0.1)', borderRadius: 8, color: 'var(--success)', fontSize: '0.85rem', marginBottom: 20, display: 'flex', alignItems: 'center', gap: 8 }}>
-              <Sparkles size={14} /> This restaurant's health score of <strong>{facility.score}</strong> is verified.
-            </div>
-
-            <h4 style={{ marginBottom: 16 }}>Popular Menu Items</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {[
-                { name: 'Signature Entrée', price: '$18.50', desc: 'Locally sourced ingredients, prepared fresh.' },
-                { name: 'Chef Special Side', price: '$6.50', desc: 'Health-certified kitchen preparation.' },
-                { name: 'Artisan Beverage', price: '$4.25', desc: 'Craft brewed in Montgomery.' }
-              ].map((item, i) => (
-                <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: 12, border: '1px solid #eee', borderRadius: 10 }}>
-                  <div>
-                    <div style={{ fontWeight: 'bold' }}>{item.name}</div>
-                    <div style={{ fontSize: '0.75rem', color: '#666' }}>{item.desc}</div>
-                  </div>
-                  <div style={{ fontWeight: 'bold', color: 'var(--primary)' }}>{item.price}</div>
-                </div>
-              ))}
-            </div>
-
-            <div style={{ marginTop: 32, padding: 20, background: '#f9f9f9', borderRadius: 12 }}>
-              <h4 style={{ marginBottom: 12 }}>Payment Method</h4>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px', border: '1px solid #ddd', borderRadius: 8, background: 'white' }}>
-                <div style={{ background: '#eee', padding: '4px 8px', borderRadius: 4, fontSize: '0.7rem', fontWeight: 'bold' }}>VISA</div>
-                <div style={{ fontSize: '0.9rem' }}>•••• •••• •••• 4242</div>
-              </div>
-            </div>
-          </div>
-
-          <div style={{ padding: 20, borderTop: '1px solid #eee' }}>
-            <button
-              onClick={handlePlaceOrder}
-              disabled={orderComplete}
-              style={{
-                width: '100%',
-                padding: '16px',
-                background: orderComplete ? 'var(--success)' : 'var(--primary)',
-                color: 'white',
-                border: 'none',
-                borderRadius: '12px',
-                fontWeight: 'bold',
-                fontSize: '1rem',
-                cursor: 'pointer',
-                transition: 'all 0.3s'
-              }}
-            >
-              {orderComplete ? '✓ Order Placed!' : 'Pay & Confirm Order ($31.75)'}
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
+
+// --- NEW HACKATHON ANALYTICS COMPONENT ---
+
 
 const App = () => {
   return (
