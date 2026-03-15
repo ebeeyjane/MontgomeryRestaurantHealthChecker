@@ -223,8 +223,8 @@ const MapDashboard = () => {
         </div>
       </div>
 
-      <div style={{ flex: 1, position: 'relative', width: '100%', minHeight: '400px' }}>
-        <MapContainer center={[32.3792, -86.3077]} zoom={12} style={{ height: '100%', width: '100%', zIndex: 1 }} attributionControl={false}>
+      <div style={{ flex: 1, position: 'relative', width: '100%', minHeight: '50vh' }}>
+        <MapContainer center={[32.3792, -86.3077]} zoom={12} style={{ height: '100%', width: '100%', position: 'absolute', top: 0, left: 0, zIndex: 1 }} attributionControl={false}>
           <TileLayer
             url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
           />
